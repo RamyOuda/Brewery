@@ -1,4 +1,4 @@
-main {
+.table-wrapper {
   display: flex;
   justify-content: center;
 }
@@ -7,12 +7,37 @@ table {
   font-family: "Noto Sans JP", sans-serif;
   padding: 30px;
   border: 1px solid black;
+  box-shadow: 5px 5px 5px #9e7e42;
+  border-radius: 20px;
 }
 
 td {
-  padding: 0 10px;
+  padding: 10px;
 }
 
 tr:nth-child(odd) {
   background-color: #ffd78c;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: right;
+  margin-top: 30px;
+}
+
+button {
+  font-family: "Lobster", cursive;
+  font-size: 20px;
+  background-color: #ecab33;
+  border: none;
+  border-radius: 20px;
+  padding: 10px 30px;
+  margin-right: 20px;
+
+  transition: ease 500ms;
+}
+
+button:hover {
+  background-color: #cc9329;
+  padding: 10px 32px;
 }
