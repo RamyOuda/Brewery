@@ -1,7 +1,24 @@
-<p>Test</p>
-
-<ul>
-  <li *ngFor="let item of apiData$ | async">
-    {{ item | json }}
-  </li>
-</ul>
+<main>
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Type</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Country</th>
+      <th>Website</th>
+      <th>Last Updated</th>
+    </tr>
+    <tr *ngFor="let brewery of apiData$ | async">
+      <td>{{ brewery.name }}</td>
+      <td>{{ brewery.brewery_type }}</td>
+      <td>{{ brewery.street }}</td>
+      <td>{{ brewery.city }}</td>
+      <td>{{ brewery.state }}</td>
+      <td>{{ brewery.country }}</td>
+      <td>{{ brewery.website_url }}</td>
+      <td>{{ brewery.updated_at }}</td>
+    </tr>
+  </table>
+</main>
