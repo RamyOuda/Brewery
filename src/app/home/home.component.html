@@ -1,22 +1,28 @@
 <main>
-  <table>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>City</th>
-      <th>State</th>
-      <th>Country</th>
-      <th>Website</th>
-      <th>Last Updated</th>
-    </tr>
-    <tr *ngFor="let brewery of apiData$ | async">
-      <td>{{ brewery.name }}</td>
-      <td>{{ brewery.street }}</td>
-      <td>{{ brewery.city }}</td>
-      <td>{{ brewery.state }}</td>
-      <td>{{ brewery.country }}</td>
-      <td>{{ brewery.website_url }}</td>
-      <td>{{ brewery.updated_at }}</td>
-    </tr>
-  </table>
+  <section class="table-wrapper">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+        <th>Country</th>
+        <th>Website</th>
+        <th>Last Updated</th>
+      </tr>
+      <tr *ngFor="let brewery of apiData$ | async">
+        <td>{{ brewery.name }}</td>
+        <td>{{ brewery.street }}</td>
+        <td>{{ brewery.city }}</td>
+        <td>{{ brewery.state }}</td>
+        <td>{{ brewery.country }}</td>
+        <td>{{ brewery.website_url }}</td>
+        <td>{{ brewery.updated_at }}</td>
+      </tr>
+      <section class="button-wrapper">
+        <button>Previous</button>
+        <button>Next</button>
+      </section>
+    </table>
+  </section>
 </main>
