@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 export class ApiService {
   constructor(private http: HttpClient) {}
 
-  url = 'https://api.openbrewerydb.org/breweries?per_page=5';
+  url = 'https://api.openbrewerydb.org/breweries?per_page=10';
 
   getData() {
     return this.http.get<any>(this.url);
